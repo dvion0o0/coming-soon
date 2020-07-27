@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+:root{
+    --primaryclr:hsl(0, 36%, 70%);
+    --primaryclr-2:hsl(0, 93%, 68%);
+    --secondaryclr:rgb(65, 58, 58);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    min-height: 100vh;
+}
+
+.left{
+margin: 3rem 0;
+}
+
+.logo{
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.bg-mobile{
+     background-size: cover; 
+     width: 100%;
+     margin-bottom: 3.5rem;
+ }
+
+ .left h1{
+    font-size: 3rem;
+    max-width: 15rem;
+    margin: 0 auto;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    color: var(--secondaryclr);
+    margin-bottom: 1.5rem;
+ }
+
+ .left h1 span{
+    color: var(--primaryclr);
+    font-weight: 300;
+ }
+
+.left .text{
+    color: var(--primaryclr);
+    line-height: 1.5;
+    margin-bottom: 1.3rem;
+    max-width: 21rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.email{
+    width: 85%;
+    padding: 0.9rem 0 0.9rem 1.2rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    outline: transparent;
+    border: 1px solid rgba(65, 58, 58, 0.2);
+    background: transparent;
+    color: var(--secondaryclr);
+}
+
+.email:focus{
+    border: 1px solid var(--primaryclr);
+    background: transparent;
+}
+
+.email::placeholder{
+    text-transform: capitalize;
+    color: hsl(0, 36%, 70%);
+    opacity: 0.6;
+}
+
+.btn{
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 65px;
+    height: 45px;
+    border-radius: 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) );
+}
+
+
+.btn:hover{
+background:hsl(0, 80%, 86%);
+opacity: 1;
+}
+
+.show{
+    border: 1px solid var(--primaryclr-2);
+}
+
+.show-error{
+    display: none;
+    color:var(--primaryclr-2);
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+    opacity: 0.7;
+}
+
+@media screen and (min-width:568px){
+    .btn{
+        left: 85%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .bg-mobile{
+        display: none;
+    }
+
+    body{
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        /* background-image: url(./images/bg-pattern-desktop.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+    .left{
+        width: 60%;
+        align-self: center;
+    }
+
+    .logo{
+        margin-top: 3rem;
+        margin-left: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    .left h1{
+        text-align: justify;
+        margin-left: 8rem;
+    }
+
+    .left .text{
+        text-align: justify;
+        margin-left: 8rem;
+        max-width: 22rem;
+    }
+
+    .bg-desktop{
+        width: 40%;
+        background-image: url(./images/hero-desktop.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .form{
+        width: 60%;
+       text-align: left;
+       margin-left: 8rem;
+    }
+
+    .btn{
+        left: 73%;
+    }
+
+
+}
